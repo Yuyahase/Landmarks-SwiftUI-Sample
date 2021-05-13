@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct LandmarkList: View {
-    @State private var showFavoritesOnly = true
+    /**
+    @EnvironmentObject
+    @EnvironmentObjectを付与したプロパティは複数のViewで共通のインスタンスを参照します。
+    アプリ全体で共通のプロパティとなる。
+     */
+    @EnvironmentObject var modelData: ModelData
+    /**
+    @State
+    structであるため保持するプロパティを変更できない。
+    @Stateを付与したプロパティはメモリ管理がSwiftUIに委譲され、変更が可能になる。
+    プロパティは値の変更が監視され、変更時に宣言されたViewのbodyが再描画される。
+     */
+    @State private var showFavoritesOnly = false
 
     var filteredLandmarks: [Landmark] {
-        landmarks.filter { landmark in
+        modelData.landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
         }
     }

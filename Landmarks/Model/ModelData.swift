@@ -6,8 +6,17 @@
 //
 
 import Foundation
+import Combine
 
-var landmarks: [Landmark] = load("landmarkData.json")
+/**
+ @Stateと似た状態管理。@ObservedObjectを利用すると、プロパティをひとまとめにしたオブジェクトとして管理できる。
+ 付与するオブジェクトはObservableObjectに準拠する必要がある。
+ また監視するプロパティは@Publishedを付与する必要がある。
+ */
+final class ModelData: ObservableObject {
+    //An observable object needs to publish any changes to its data, so that its subscribers can pick up the change.
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
 
 //The load method relies on the return type’s conformance to the Codable protocol.
 func load<T: Decodable>(_ filename: String) -> T {
