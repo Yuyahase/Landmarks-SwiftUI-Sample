@@ -31,7 +31,6 @@ struct LandmarkList: View {
     var body: some View {
         NavigationView {
             List {
-                
                 //You use the $ prefix to access a binding to a state variable, or one of its properties.
                 Toggle(isOn: $showFavoritesOnly) {
                     Text("Favorites only")
@@ -41,8 +40,8 @@ struct LandmarkList: View {
                         LandmarkRow(landmark: landmark)
                     }
                 }
-                .navigationTitle("Landmarks")
             }
+            .navigationTitle("Landmarks")
         }
     }
 }
@@ -54,6 +53,7 @@ struct LandmarkList_Previews: PreviewProvider {
                 //xcrun simctl list devicetypesでpreviewDeviceできるデバイスを表示
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
+                .environmentObject(ModelData())
         }
     }
 }
