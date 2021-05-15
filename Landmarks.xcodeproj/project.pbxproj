@@ -25,6 +25,7 @@
 		2E3CA70C264ED16E009D6F4B /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CA70B264ED16E009D6F4B /* RotatedBadgeSymbol.swift */; };
 		2E3CA70E264ED1A2009D6F4B /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CA70D264ED1A2009D6F4B /* BadgeBackground.swift */; };
 		4D999D0E264D7E2900B920EB /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D999D0D264D7E2900B920EB /* FavoriteButton.swift */; };
+		E2794FA7264FB71900323FA3 /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = E2794FA6264FB71900323FA3 /* hikeData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		2E3CA70B264ED16E009D6F4B /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 		2E3CA70D264ED1A2009D6F4B /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		4D999D0D264D7E2900B920EB /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		E2794FA6264FB71900323FA3 /* hikeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hikeData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		2E3CA6F3264BEAFD009D6F4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2794FA6264FB71900323FA3 /* hikeData.json */,
 				2E3CA6ED264BE7CB009D6F4B /* landmarkData.json */,
 			);
 			path = Resources;
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2794FA7264FB71900323FA3 /* hikeData.json in Resources */,
 				2E3CA6EE264BE7CB009D6F4B /* landmarkData.json in Resources */,
 				2E3CA6D9264BCE50009D6F4B /* Preview Assets.xcassets in Resources */,
 				2E3CA6D6264BCE50009D6F4B /* Assets.xcassets in Resources */,
