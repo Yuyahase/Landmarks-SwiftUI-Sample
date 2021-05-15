@@ -16,6 +16,9 @@ import Combine
 final class ModelData: ObservableObject {
     //An observable object needs to publish any changes to its data, so that its subscribers can pick up the change.
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+
+    //Because you’ll never modify hike data after initially loading it, you don’t need to mark it with the @Published attribute.
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 //The load method relies on the return type’s conformance to the Codable protocol.
