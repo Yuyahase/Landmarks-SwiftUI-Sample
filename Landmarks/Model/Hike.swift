@@ -29,7 +29,7 @@ ForEach等で一覧表示する都合でHashble, Idenrifiableに適合させる
         var distanceFromStart:
             Double
         var elevation: Range<Double>
-        var pace: Range<Double>.Bound
+        var pace: Range<Double>
         var heartRate: Range<Double>
 
     }
