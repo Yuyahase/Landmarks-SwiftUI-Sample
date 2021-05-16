@@ -17,6 +17,15 @@ struct Landmark: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool
 
+    var category: Category
+
+    //CaseIterable: A type that provides a collection of all of its values.
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+
     private var imageName: String
     var image: Image{
         Image(imageName)
